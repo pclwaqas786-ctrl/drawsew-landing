@@ -98,7 +98,7 @@ html, body, [data-testid="stAppViewContainer"] { background: #101514; }
 st.markdown(
     f"""
 <div class="ds-nav">
-  <div class="ds-logo">🧵 DRAWSEW</div>
+  <div class="ds-logo"><img src="data:image/png;base64,{img_b64('dp.png')}" style="height:38px;width:38px;border-radius:50%;vertical-align:middle;margin-right:8px;" />DRAWSEW</div>
   <div class="ds-links">
     <a href="#services">Services</a><a href="#portfolio">Portfolio</a>
     <a href="#process">Process</a><a href="#contact">Contact</a>
