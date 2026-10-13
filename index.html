@@ -30,18 +30,22 @@ html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.6}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 /* nav */
-.nav{position:sticky;top:0;z-index:99;background:rgba(13,31,45,.97);border-bottom:1px solid rgba(201,151,63,.25)}
+.nav{position:sticky;top:0;z-index:99;background:rgba(13,31,45,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,151,63,.25)}
 .nav-in{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:24px}
 .brand{color:#fff;text-decoration:none;font-family:var(--serif);font-size:1.35rem}
 .brand b{color:var(--gold-lt)}
 .nav-links{margin-left:auto;display:flex;gap:20px;align-items:center}
 .nav-links a.nl{color:#d8e2ea;text-decoration:none;font-size:.92rem}
 .nav-links a.nl:hover{color:var(--gold-lt)}
-.btn-gold{display:inline-block;background:var(--gold);color:var(--navy)!important;font-weight:700;text-decoration:none;padding:10px 24px;border-radius:999px;white-space:nowrap}
-.btn-gold:hover{background:var(--gold-lt)}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--navy)!important;font-weight:700;text-decoration:none;padding:10px 24px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 24px rgba(201,151,63,.35);transition:transform .15s,box-shadow .15s}
+.btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 12px 32px rgba(201,151,63,.5)}
 .btn-outline{display:inline-block;background:transparent;color:#fff!important;border:1.5px solid rgba(255,255,255,.55);font-weight:600;padding:13px 32px;border-radius:999px;text-decoration:none}
 /* hero */
-.hero{background:radial-gradient(1200px 600px at 75% 20%,#1a3a55 0%,var(--navy) 60%);color:#fff;padding:84px 0 72px}
+.hero{background:
+  radial-gradient(700px 340px at 82% 12%,rgba(201,151,63,.14),transparent 60%),
+  radial-gradient(560px 300px at 8% 88%,rgba(201,151,63,.08),transparent 60%),
+  radial-gradient(1200px 600px at 75% 20%,#1a3a55 0%,var(--navy) 60%);
+  color:#fff;padding:84px 0 72px;position:relative;overflow:hidden}
 .eyebrow{display:inline-block;color:var(--gold-lt);font-size:.78rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;border-bottom:2px solid var(--gold);padding-bottom:8px}
 .hero h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);line-height:1.15;max-width:640px;margin-bottom:18px}
 .hero h1 .hl{color:var(--gold-lt);font-style:italic}
@@ -63,7 +67,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 section{scroll-margin-top:84px}
 /* cards */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.svc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:transform .2s ease,box-shadow .2s ease}
+.svc:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(13,31,45,.14)}
 .svc .idx{font-family:var(--serif);color:var(--gold);font-weight:700;letter-spacing:2px;margin-bottom:12px}
 .svc h3{font-family:var(--serif);font-size:1.22rem;margin-bottom:10px}
 .svc p{color:var(--muted);font-size:.96rem}
@@ -71,7 +76,8 @@ section{scroll-margin-top:84px}
 .fmtrow{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .fmt{background:#fff;border:1px solid var(--line);font-weight:700;letter-spacing:1px;border-radius:8px;padding:12px 26px}
 /* pricing */
-.price{background:#fff;border:1px solid var(--line);border-radius:16px;padding:36px 30px;text-align:center;position:relative;display:flex;flex-direction:column}
+.price{background:#fff;border:1px solid var(--line);border-radius:16px;padding:36px 30px;text-align:center;position:relative;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+.price:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(13,31,45,.14)}
 .price h3{font-family:var(--serif);font-size:1.25rem;margin-bottom:6px}
 .price .amount{font-family:var(--serif);font-size:2.6rem;font-weight:700;color:var(--navy);margin:8px 0 4px}
 .price ul{list-style:none;margin:20px 0 26px;text-align:left}
@@ -88,13 +94,15 @@ section{scroll-margin-top:84px}
 .btn-ghost{margin-top:auto;display:inline-block;border:1.5px solid var(--navy);color:var(--navy);font-weight:700;padding:11px 26px;border-radius:999px;text-decoration:none}
 /* process */
 .steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pstep{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px 26px}
+.pstep{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px 26px;transition:transform .2s ease,box-shadow .2s ease}
+.pstep:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(13,31,45,.14)}
 .pstep .snum{font-family:var(--serif);font-size:2.6rem;font-weight:700;color:var(--gold);margin-bottom:8px}
 .pstep h3{font-family:var(--serif);font-size:1.2rem;margin-bottom:10px}
 .pstep p{color:var(--muted);font-size:.96rem}
 /* why */
 .whygrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 28px}
-.whyitem{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.whyitem{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;transition:transform .2s ease,box-shadow .2s ease}
+.whyitem:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(13,31,45,.12)}
 .tick{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--gold-lt);display:flex;align-items:center;justify-content:center;font-weight:800}
 .whyitem h4{margin:2px 0 6px;font-size:1.02rem}
 .whyitem p{color:var(--muted);font-size:.93rem}
@@ -107,7 +115,10 @@ section{scroll-margin-top:84px}
 .faq details[open] summary::after{content:"\2013"}
 .faq .a{padding:0 22px 20px;color:var(--muted);font-size:.97rem}
 /* contact */
-.contactband{background:radial-gradient(900px 500px at 20% 30%,#1a3a55 0%,var(--navy) 65%);color:#fff;padding:76px 0;text-align:center;margin-top:64px}
+.contactband{background:
+  radial-gradient(700px 340px at 50% 0%,rgba(201,151,63,.16),transparent 60%),
+  radial-gradient(900px 500px at 20% 30%,#1a3a55 0%,var(--navy) 65%);
+  color:#fff;padding:76px 0;text-align:center;margin-top:64px;position:relative;overflow:hidden}
 .contactband h2{font-family:var(--serif);font-size:2.2rem;margin-bottom:14px}
 .contactband p{color:#c3d2de;font-size:1.08rem;max-width:620px;margin:0 auto 30px}
 .contactband .btnrow{justify-content:center}
